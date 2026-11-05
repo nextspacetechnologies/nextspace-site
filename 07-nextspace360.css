@@ -28,21 +28,6 @@
   overflow:hidden;
 }
 
-.n360-visual svg {
-  display:block;
-  width:100%;
-  height:auto;
-}
-
-.n360-ring {
-  animation:n360ring 36s linear infinite;
-}
-
-@keyframes n360ring {
-  to {
-    stroke-dashoffset:-1400;
-  }
-}
 
 .n360-feat {
   display:grid;
@@ -143,4 +128,22 @@
   .n360-ring {
     animation:none;
   }
+}
+
+/* Live tour box (the embed fills it; keeps height while loading) */
+.n360-embed {
+  width:100%;
+  min-height:500px;
+  background:#07122E;
+}
+
+.n360-embed iframe {
+  display:block;
+  width:100%;
+}
+
+.n360-loading {
+  padding:40px 20px;
+  text-align:center;
+  color:#A9B8DA;
 }

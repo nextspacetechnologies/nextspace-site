@@ -15,11 +15,11 @@ var BASE = cs && cs.src ? cs.src.replace(/[^\/]*(\?.*)?$/, '') : 'https://cdn.js
 var SECTIONS = [
 { id: '01-header',        zone: 'top',    js: true },
 { id: '02-hero',          zone: 'main',   js: true },
+{ id: '07-nextspace360',  zone: 'main',   js: true },
 { id: '03-brands',        zone: 'main' },
 { id: '04-about',         zone: 'main' },
 { id: '05-what',          zone: 'main' },
 { id: '06-services',      zone: 'main' },
-{ id: '07-nextspace360',  zone: 'main' },
 { id: '08-products',      zone: 'main' },
 { id: '09-studio',        zone: 'main' },
 { id: '10-work',          zone: 'main' },

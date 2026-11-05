@@ -12,6 +12,10 @@
 'use strict';
 var cs = document.currentScript;
 var BASE = cs && cs.src ? cs.src.replace(/[^\/]*(\?.*)?$/, '') : 'https://cdn.jsdelivr.net/gh/nextspacetechnologies/nextspace-site@main/';
+/* PIN: normally leave as ''. If the site shows an old version of a section after you edit it (the CDN cache is slow),
+   put the latest GitHub commit code here (first 7 characters, e.g. '32b5556') to load exactly that version. */
+var PIN = '32b5556';
+if (PIN) BASE = BASE.replace('@main/', '@' + PIN + '/');
 var SECTIONS = [
 { id: '01-header',        zone: 'top',    js: true },
 { id: '02-hero',          zone: 'main',   js: true },

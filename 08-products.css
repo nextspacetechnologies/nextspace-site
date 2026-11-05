@@ -1,0 +1,66 @@
+/* 08 · PRODUCTS: NextSpace Tap (the only product on this site) */
+
+.brand-logo {
+  width:100%;
+  max-width:220px;
+  height:auto;
+  display:block;
+  mix-blend-mode:multiply;
+}
+
+.prod-feature {
+  display:grid;
+  grid-template-columns:minmax(0,0.6fr) minmax(0,1.4fr);
+  gap:clamp(24px,5vw,72px);
+  align-items:center;
+  padding:clamp(28px,4vw,56px);
+  background:var(--bg);
+  border:1px solid var(--line);
+}
+
+.prod-body {
+  display:grid;
+  gap:12px;
+  align-content:start;
+  min-width:0;
+}
+
+.prod-tag {
+  font-family:var(--f-mono);
+  font-size:.72rem;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--accent-text);
+}
+
+.prod-body .hook {
+  font-family:var(--f-display);
+  font-size:clamp(1.6rem,2.8vw,2.4rem);
+  font-weight:600;
+  line-height:1.1;
+  letter-spacing:-0.025em;
+  color:var(--ink);
+}
+
+.prod-body p {
+  color:var(--muted);
+  max-width:56ch;
+}
+
+.prod-body .hook {
+  max-width:none;
+}
+
+.prod-cta {
+  margin-top:10px;
+}
+
+@media (max-width:900px) {
+  .prod-feature {
+    grid-template-columns:1fr;
+  }
+
+  .brand-logo {
+    max-width:170px;
+  }
+}

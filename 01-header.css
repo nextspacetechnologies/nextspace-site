@@ -1,0 +1,164 @@
+/* 01 · HEADER: top bar, logo and navigation. */
+
+.site-header {
+  --hi:#FFFFFF;
+  --hl:rgba(255,255,255,0.16);
+  position:fixed;
+  left:0;
+  right:0;
+  top:0;
+  z-index:100;
+  padding-top:env(safe-area-inset-top,0px);
+  color:var(--hi);
+  border-bottom:1px solid transparent;
+  transition:background-color 0.25s ease,border-color 0.25s ease;
+}
+
+.site-header.solid {
+  --hi:var(--ink);
+  --hl:var(--line);
+  background:var(--bg-glass);
+  -webkit-backdrop-filter:blur(14px);
+  backdrop-filter:blur(14px);
+  border-bottom-color:var(--line);
+}
+
+.site-header .wrap {
+  height:var(--header-h);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+
+.wordmark {
+  color:var(--hi);
+  text-decoration:none;
+  font-family:var(--f-display);
+  font-size:1.28rem;
+  letter-spacing:-0.02em;
+  font-weight:700;
+  white-space:nowrap;
+}
+
+.wordmark span {
+  font-weight:400;
+  opacity:0.78;
+}
+
+.nav {
+  display:flex;
+  align-items:center;
+  gap:2px;
+}
+
+.nav a {
+  color:var(--hi);
+  text-decoration:none;
+  font-size:0.95rem;
+  font-weight:500;
+  padding:8px 12px;
+  border-radius:6px;
+  opacity:0.85;
+}
+
+.nav a:hover,.nav a.on {
+  opacity:1;
+  background:var(--hl);
+}
+
+.nav a.btn {
+  margin-left:10px;
+  opacity:1;
+  color:#FFFFFF;
+}
+
+.nav a.btn:hover {
+  background:#1B78F0;
+}
+
+.nav-toggle {
+  display:none;
+  background:none;
+  border:1px solid var(--hl);
+  color:var(--hi);
+  border-radius:6px;
+  padding:8px 14px;
+  font:inherit;
+  font-weight:600;
+  cursor:pointer;
+}
+
+@media (max-width:1040px) {
+  .nav-toggle {
+    display:inline-block;
+  }
+  .nav {
+    display:none;
+    position:absolute;
+    left:0;
+    right:0;
+    top:100%;
+    flex-direction:column;
+    align-items:stretch;
+    gap:0;
+    background:var(--navy);
+    border-bottom:1px solid var(--navy-line);
+    padding:8px var(--gutter) 20px;
+  }
+  .nav.open {
+    display:flex;
+  }
+  .nav a {
+    color:#fff;
+    padding:14px 4px;
+    border-bottom:1px solid var(--navy-line);
+    border-radius:0;
+    opacity:1;
+  }
+  .nav a.btn {
+    margin:16px 0 0;
+    text-align:center;
+    border-bottom:1px solid var(--accent);
+  }
+}
+
+.wordmark {
+  display:inline-flex;
+  align-items:center;
+  line-height:0;
+}
+
+.wordmark img {
+  height:30px;
+  width:auto;
+  display:block;
+}
+
+.wordmark .logo-c {
+  display:none;
+}
+
+.site-header.solid .wordmark .logo-w {
+  display:none;
+}
+
+.site-header.solid .wordmark .logo-c {
+  display:block;
+}
+
+@media (max-width:900px) {
+  .wordmark img {
+    height:26px;
+  }
+}
+
+.wordmark img {
+  height:22px;
+}
+
+@media (max-width:900px) {
+  .wordmark img {
+    height:20px;
+  }
+}

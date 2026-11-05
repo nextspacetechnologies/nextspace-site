@@ -1,0 +1,44 @@
+/* 99 · MOTION: scroll-reveal and reduced-motion overrides. Must load last. */
+
+.reveal {
+  transition:transform 0.8s cubic-bezier(0.2,0.7,0.2,1);
+}
+
+.reveal.pre {
+  transform:translateY(22px);
+}
+
+@media (prefers-reduced-motion:reduce) {
+  html {
+    scroll-behavior:auto;
+  }
+  .reveal {
+    transition:none;
+  }
+  .btn {
+    transition:none;
+  }
+  .site-header {
+    transition:none;
+  }
+  .layer-index li::before {
+    transition:none;
+  }
+  .reveal.pre {
+    transform:none;
+  }
+}
+
+@media (prefers-reduced-motion:reduce) {
+  .fx-curtain {
+    display:none;
+  }
+  .mk,.wipe,.wipe img,img.wipe,.fx-line {
+    clip-path:none!important;
+    transform:none!important;
+    transition:none!important;
+  }
+  .fx-cursor {
+    display:none;
+  }
+}
